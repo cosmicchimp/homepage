@@ -11,42 +11,23 @@
     <header>
       <div id="headerTitle"><strong>CosmicChimp</strong></div>
       <nav>
-        <svg
-          class="menuButton"
-          width="60px"
-          height="60px"
-          viewBox="-2.4 -2.4 28.80 28.80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          transform="rotate(0)"
-          stroke="#ffffff"
-        >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke="#ffffff"
-            stroke-width="0.43200000000000005"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M4 6H20M4 12H20M4 18H20"
-              stroke="#ffffff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </g>
-        </svg>
-        <ul class="navUl">
-          <li class="navLi">About</li>
-          <li class="navLi">Projects</li>
-          <li class="navLi">Contact</li>
-        </ul>
+        <div class="dropdownContainer">
+          <ul class="navUl">
+            <li class="navLi" id="navLi1">About</li>
+            <li class="navLi" id="navLi2">Projects</li>
+            <li class="navLi" id="navLi3">Contact</li>
+          </ul>
+        </div>
       </nav>
     </header>
-
+    <section>
+      <div class="aboutContainer">
+        <img id="aboutPhoto" src="./assets/cosmicchimp.png" alt="" />
+        <p id="aboutText">
+          Hi, my name is CosmicChimp, I'm an aspiring web developer.
+        </p>
+      </div>
+    </section>
     <main>
       <h1>My Projects:</h1>
     </main>
