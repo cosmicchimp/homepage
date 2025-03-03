@@ -30,7 +30,7 @@
     margin-bottom: none !important;
   }
   #textContainer {
-    height: 10em !important;
+    height: 11em !important;
   }
   .carouselButton,
   .carouselCircle {
@@ -52,7 +52,11 @@
     min-height: 6em !important;
   }
 }
-
+@media (max-width: 650px) {
+  #textContainer {
+    min-height: 11em !important;
+  }
+}
 * {
   --mainColor: rgb(74, 73, 73);
   --secondaryColor: #6b5b95;
@@ -181,12 +185,18 @@ nav {
 }
 .carouselBox {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
   width: clamp(30vw, 50vw, 51vw);
   min-width: 30vw;
   border-radius: 10px;
   background-color: var(--mainColor);
   margin-bottom: 3vh;
+}
+.carouselBox > h2 {
+  padding: 1vh;
+  user-select: none;
 }
 .projectCarousel {
   background-color: rgb(74, 73, 73);
@@ -250,6 +260,10 @@ nav {
   padding-top: 1vh;
   gap: 1vh;
   min-width: 30vw;
+  min-height: 50vh;
+}
+.findMeSection > h2 {
+  padding: 1vh;
 }
 .githubSvg:hover {
   transition: 500ms ease-in;
@@ -258,7 +272,12 @@ nav {
 .githubSvg:active {
   animation: shrink 500ms ease;
 }
-
+.outlookSvg:hover {
+  animation: 500ms ease-in grow;
+}
+.outlookSvg:active {
+  animation: 500ms ease-out shrink;
+}
 @keyframes grow {
   from {
     transform: scale(1);
