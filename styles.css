@@ -34,7 +34,11 @@
   }
   .carouselButton,
   .carouselCircle {
-    height: clamp(1vw, 8vw, 10vw);
+    height: clamp(1vw, 8vw, 10vw) !important;
+  }
+  .carouselBox {
+    margin-top: clamp(3vh, 5vh, 6vh) !important;
+    min-height: 20vh !important;
   }
 }
 
