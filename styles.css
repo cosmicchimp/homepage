@@ -1,13 +1,17 @@
 @media screen and (max-width: 600px) {
-  header > h1 {
-    margin-left: auto !important;
-  }
   header {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: center !important;
   }
   .navUl {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  nav {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
