@@ -5,6 +5,13 @@
     align-items: center !important;
     justify-content: center !important;
   }
+  header > h1 {
+    align-self: center;
+    padding: 2vh;
+  }
+  .aboutSection {
+    max-height: 50vh;
+  }
   .navUl {
     display: flex !important;
     flex-direction: column !important;
@@ -20,11 +27,13 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    margin-bottom: none !important;
   }
   #textContainer {
     height: 10em !important;
   }
 }
+
 @media (max-width: 900px) {
   .aboutContainer {
     display: flex !important;
@@ -32,6 +41,7 @@
     align-items: center !important;
   }
 }
+
 * {
   --mainColor: rgb(74, 73, 73);
   --secondaryColor: #6b5b95;
@@ -119,6 +129,7 @@ nav {
   padding: 10px;
   position: relative;
   user-select: none;
+  text-decoration: underline;
 }
 .navLi:hover {
   animation: grow 500ms ease forwards;
