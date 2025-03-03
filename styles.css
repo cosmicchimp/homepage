@@ -1,14 +1,33 @@
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  header > h1 {
+    margin-left: auto !important;
+  }
   header {
     display: flex !important;
     flex-direction: column !important;
-    text-align: center;
+    align-items: center !important;
   }
-  header > h1 {
-    margin-left: auto;
+  .navUl {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .aboutContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  #textContainer {
+    height: 10em !important;
   }
 }
-
+@media (max-width: 900px) {
+  .aboutContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
 * {
   --mainColor: rgb(74, 73, 73);
   --secondaryColor: #6b5b95;
@@ -123,7 +142,8 @@ nav {
   padding: 10px;
   overflow: hidden;
   color: white;
-  display: block;
+  display: flex;
+  flex-direction: row;
   font-size: clamp(0.5rem, 1.3rem, 4rem);
   max-height: 40vh;
 }
@@ -140,6 +160,7 @@ nav {
   min-width: 30vw;
   border-radius: 10px;
   background-color: var(--mainColor);
+  margin-bottom: 3vh;
 }
 .projectCarousel {
   background-color: rgb(74, 73, 73);
@@ -173,7 +194,6 @@ nav {
 .languageBar {
   margin-top: 2vh;
   margin-bottom: 2vh;
-  background-color: rgb(74, 73, 73);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -206,7 +226,8 @@ nav {
   min-width: 30vw;
 }
 .githubSvg:hover {
-  animation: spin ease-out 1000ms;
+  transition: 500ms ease-in;
+  transform: rotate(360deg);
 }
 .githubSvg:active {
   animation: shrink 500ms ease;
@@ -236,13 +257,5 @@ nav {
   }
   to {
     transform: scale(1);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
