@@ -1,23 +1,56 @@
 * {
+  --mainColor: rgb(74, 73, 73);
+  --secondaryColor: #6b5b95;
   margin: 0 0 0 0;
   gap: 0;
   padding: 0;
 }
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
-
+.languageSvg {
+  height: 5vh;
+}
+.languageSvg:hover {
+  animation: grow 700ms ease-in;
+}
 body {
   font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: clamp(10rem, 40rem, 50rem);
+  background-color: black;
+  transform-origin: 0;
+  transform: skewY(-10deg);
+  box-shadow: 0 0.1rem 1rem #595959;
 }
 body {
   background-color: #6b5b95;
   overflow-x: hidden;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 header {
   display: flex;
-  background-color: #6b5b95;
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
+  width: clamp(5vw, 100vw, 100vw);
+  padding: 15px;
+  width: 50vw;
+  user-select: none;
+}
+.sticky {
+  z-index: 1000;
+  top: 0;
+  position: sticky;
 }
 #headerTitle {
   font-size: clamp(1em, 2vw, 2em) !important;
@@ -42,22 +75,124 @@ nav {
 .navLi {
   padding: 10px;
   position: relative;
+  user-select: none;
 }
 .navLi:hover {
-  animation: grow 500ms ease;
+  animation: grow 500ms ease forwards;
 }
 .navLi:active {
   animation: shrink 500ms ease;
 }
+#aboutPhoto {
+  border-radius: 10px;
+  height: clamp(5vw, 20vw, 40vw);
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+  width: 50vw;
+  margin-bottom: 10vh;
+}
+#textContainer {
+  /* background-color: rgb(74, 73, 73); */
+  height: clamp(5vw, 12vw, 20vw);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+  color: white;
+  font-size: clamp(0.5rem, 1.3rem, 4rem);
+  width: clamp(15vw, 50vw, 51vw);
+}
+.projectSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectCarousel {
+  background-color: rgb(74, 73, 73);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw;
+  width: clamp(10vw, 30vw, 50vw);
+  color: white;
+}
+.carouselImage {
+  height: clamp(5vw, 15vw, 20vw);
+  border-radius: 10px;
+  border: solid black 2px;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}
+.carouselButton,
+.carouselCircle {
+  height: clamp(1vw, 3vw, 10vw);
+}
+.carouselButton:active {
+  animation: shrink 500ms linear;
+}
+.scrollBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.languageBar {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgb(74, 73, 73);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  width: clamp(5vw, 50vw, 50vw);
+}
+.languageBox {
+  background-color: var(--mainColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 2vw;
+  padding-top: 1vw;
+  color: white;
+  height: clamp(5vw, 15vh, 20vh);
+}
+.findMeSection {
+  background-color: var(--mainColor);
+  margin-top: 4vh;
+  width: 50vw;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vh;
+  gap: 1vh;
+}
+.githubSvg:hover {
+  animation: spin ease-out 1000ms;
+}
+.githubSvg:active {
+  animation: shrink 500ms ease;
+}
+
 @keyframes grow {
   from {
     transform: scale(1);
+    text-shadow: 0 0 10px #fffb1a;
   }
   50% {
     transform: scale(1.2);
+    text-shadow: 0 0 20px #fffb1a;
   }
   to {
     transform: scale(1);
+    text-shadow: 0 0 10px #fffb1a;
   }
 }
 
@@ -70,5 +205,13 @@ nav {
   }
   to {
     transform: scale(1);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
