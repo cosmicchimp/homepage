@@ -32,13 +32,20 @@
   #textContainer {
     height: 10em !important;
   }
+  .carouselButton,
+  .carouselCircle {
+    height: clamp(1vw, 8vw, 10vw);
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .aboutContainer {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+  }
+  #textContainer {
+    min-height: 6em !important;
   }
 }
 
