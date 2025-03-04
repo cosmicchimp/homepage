@@ -17,3 +17,38 @@ window.addEventListener("resize", () => {
 mediaCheck();
 
 //image carousel functionality
+const sources = [
+  "./assets/TicTacToeScreen.PNG",
+  "./assets/BattleshipScreen.PNG",
+  "./assets/TodoListScreen.PNG",
+];
+const links = [
+  "https://cosmicchimp.github.io/Game_Projects/TicTacToe/",
+  "https://github.com/cosmicchimp/Game_Projects/tree/main/BattleshipV2",
+  "https://cosmicchimp.github.io/todo-list/",
+];
+let photoNum = -1;
+const nextButton = document.querySelector("#nextButton");
+const backButton = document.querySelector("#backButton");
+const carouselCircle1 = document.querySelector("#carouselCircle1");
+const carouselCircle2 = document.querySelector("#carouselCircle2");
+const carouselCircle3 = document.querySelector("#carouselCircle3");
+let currentPhoto = document.querySelector(".carouselImage");
+let photoLink = document.querySelector(".imageLink");
+photoLink.href = links[0];
+function nextPhoto() {
+  let pastCircle = document.getElementById(`carouselCircle${photoNum}`);
+  if (photoNum < 2) {
+    photoNum++;
+  } else {
+    photoNum = 0;
+  }
+  photoLink.href = links[photoNum];
+  currentPhoto.src = sources[photoNum];
+  let currentCircle = document.getElementById(`carouselCircle${photoNum}`);
+  currentCircle.style.fill = "black";
+  pastCircle.style.fill = "none";
+}
+nextButton.addEventListener("click", () => {
+  nextPhoto();
+});
