@@ -10,7 +10,7 @@
     padding: 2vh;
   }
   .aboutSection {
-    max-height: 55vh;
+    max-height: 50vh;
   }
   .navUl {
     display: flex !important;
@@ -30,14 +30,14 @@
     margin-bottom: none !important;
   }
   #textContainer {
-    height: 13em !important;
+    height: 10em !important;
   }
   .carouselButton,
   .carouselCircle {
     height: clamp(1vw, 8vw, 10vw) !important;
   }
   .carouselBox {
-    margin-top: clamp(9vh, 15vh, 20vh) !important;
+    margin-top: clamp(5vh, 8vh, 11vh) !important;
     min-height: 20vh !important;
   }
 }
@@ -76,6 +76,9 @@ body {
   flex-direction: column;
   align-items: center;
   overscroll-behavior-x: none;
+}
+html {
+  scroll-behavior: smooth;
 }
 html::before {
   content: "";
@@ -220,6 +223,9 @@ nav {
 .carouselButton,
 .carouselCircle {
   height: clamp(1vw, 3vw, 10vw);
+}
+#nextButton {
+  transition: transform 500ms ease;
 }
 .carouselCircle {
   transition: fill 500ms ease; /* Transition over 500ms */
