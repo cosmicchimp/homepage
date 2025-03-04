@@ -24,6 +24,7 @@ const sources = [
   "./assets/BattleshipScreen.PNG",
   "./assets/TodoListScreen.PNG",
 ];
+const titles = ["Tic-Tac-Toe", "Battleship", "Todo App"];
 const links = [
   "https://cosmicchimp.github.io/Game_Projects/TicTacToe/",
   "https://github.com/cosmicchimp/Game_Projects/tree/main/BattleshipV2",
@@ -38,7 +39,7 @@ const carouselCircle2 = document.querySelector("#carouselCircle2");
 const carouselCircle3 = document.querySelector("#carouselCircle3");
 let currentPhoto = document.querySelector(".carouselImage");
 let photoLink = document.querySelector(".imageLink");
-
+let projectTitle = document.querySelector(".projectTitle");
 // Set initial photo link
 photoLink.href = links[photoNum];
 carouselCircle0.style.fill = "black";
@@ -55,6 +56,7 @@ function nextPhoto() {
   // Update the photo and link
   photoLink.href = links[photoNum];
   currentPhoto.src = sources[photoNum];
+  projectTitle.innerHTML = titles[photoNum];
   nextButton.style.transform = "translateX(20px)";
   nextButton.style.transform = "translateX(0px)";
   // Update the carousel circle fill color
