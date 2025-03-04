@@ -10,7 +10,7 @@
     padding: 2vh;
   }
   .aboutSection {
-    max-height: 50vh;
+    max-height: 55vh;
   }
   .navUl {
     display: flex !important;
@@ -30,7 +30,7 @@
     margin-bottom: none !important;
   }
   #textContainer {
-    height: 12em !important;
+    height: 13em !important;
   }
   .carouselButton,
   .carouselCircle {
