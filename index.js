@@ -52,3 +52,7 @@ function nextPhoto() {
 nextButton.addEventListener("click", () => {
   nextPhoto();
 });
+
+setInterval(() => {
+  nextPhoto();
+}, 2000);

@@ -30,14 +30,14 @@
     margin-bottom: none !important;
   }
   #textContainer {
-    height: 11em !important;
+    height: 12em !important;
   }
   .carouselButton,
   .carouselCircle {
     height: clamp(1vw, 8vw, 10vw) !important;
   }
   .carouselBox {
-    margin-top: clamp(3vh, 5vh, 6vh) !important;
+    margin-top: clamp(9vh, 15vh, 20vh) !important;
     min-height: 20vh !important;
   }
 }
@@ -220,6 +220,9 @@ nav {
 .carouselButton,
 .carouselCircle {
   height: clamp(1vw, 3vw, 10vw);
+}
+.carouselCircle {
+  transition: fill 500ms ease; /* Transition over 500ms */
 }
 .carouselButton:active {
   animation: shrink 500ms linear;
