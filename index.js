@@ -4,7 +4,7 @@ const aboutText = document.querySelector("#aboutText");
 const mobileQuery = window.matchMedia("(max-width: 900px)");
 
 const mediaCheck = () => {
-  if (mediaQuery.matches && !mobileQuery.matches) {
+  if (mediaQuery.matches) {
     aboutText.innerHTML =
       "Hi, my name is CosmicChimp, have a look at some of my work below.";
   } else {
@@ -13,7 +13,9 @@ const mediaCheck = () => {
   }
 };
 
-window.addEventListener("resize", mediaCheck);
+window.addEventListener("resize", () => {
+  mediaCheck();
+});
 mediaCheck(); // Ensure it runs on page load
 
 // Image carousel functionality
@@ -53,17 +55,14 @@ function nextPhoto() {
   // Update the photo and link
   photoLink.href = links[photoNum];
   currentPhoto.src = sources[photoNum];
-
+  nextButton.style.transform = "translateX(20px)";
+  nextButton.style.transform = "translateX(0px)";
   // Update the carousel circle fill color
   let currentCircle = document.getElementById(`carouselCircle${photoNum}`);
   if (pastCircle) pastCircle.style.fill = "none"; // Ensure past circle is reset
   currentCircle.style.fill = "black"; // Highlight the current circle
 
   // Animate the button with scaling effect
-  nextButton.style.transform = "scale(1.1)";
-  setTimeout(() => {
-    nextButton.style.transform = "scale(1)";
-  }, 500);
 }
 
 // Event listener for the "Next" button
