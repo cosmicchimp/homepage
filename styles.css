@@ -210,6 +210,8 @@ nav {
 }
 .carouselImage {
   height: clamp(5vw, 15vw, 20vw);
+  max-width: 20vw;
+  user-select: none;
   border-radius: 10px;
   border: solid black 2px;
   margin-bottom: 1vw;
